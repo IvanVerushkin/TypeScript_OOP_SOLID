@@ -1,9 +1,9 @@
 const {Book} = require('./types');
 
-class BooksRepository {
-    createBook(book: Book) { }
-    getBook(id: string) { }
-    getBooks() { }
-    updateBook(id: string) { }
-    deleteBook(id: string) { }
-}
+abstract class BooksRepository {
+    abstract createBook(book: Book): void;
+    abstract getBook(id: string): Book;
+    abstract getBooks(): Book[];
+    abstract updateBook(id: string): Book;
+    abstract deleteBook(id: string): void;
+};
